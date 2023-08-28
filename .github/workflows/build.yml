@@ -23,6 +23,7 @@ jobs:
 
       - name: Build the Docker image
         run: |
+          sh prepare.sh
           cd $HOME/nodebb
           docker build . --file Dockerfile --tag fabricatorsltd/nodebb:${{ github.ref_name }}
 
